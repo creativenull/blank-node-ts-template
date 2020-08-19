@@ -12,7 +12,8 @@
     "dev": "concurrently -n NODE,ESLINT \"yarn dev:node\" \"yarn dev:lint\"",
     "dev:lint": "esw -w --ext ts",
     "dev:node": "nodemon --ext ts,json src/index.ts",
-    "start": "node $npm_package_main"
+    "start": "node $npm_package_main",
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^26.0.10",
