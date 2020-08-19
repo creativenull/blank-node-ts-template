@@ -7,9 +7,10 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc -p .",
+    "build": "tsc",
+    "clean": "rimraf ./dist",
     "dev": "concurrently -n NODE,ESLINT \"yarn dev:node\" \"yarn dev:lint\"",
-    "dev:lint": "esw -w --ext .ts src",
+    "dev:lint": "esw -w --ext ts",
     "dev:node": "nodemon --ext ts,json src/index.ts",
     "start": "node $npm_package_main"
   },
@@ -25,6 +26,7 @@
     "eslint-watch": "^7.0.0",
     "jest": "^26.4.0",
     "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.2.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
